@@ -2,21 +2,21 @@
   "name": "my-api-website",
   "version": "1.0.0",
   "description": "A simple web API built with Node.js and Express",
-  "main": "index.js", // Ganti dengan nama file utama Anda
+  "main": "index.js",
   "scripts": {
-    "start": "node index.js", // Perintah untuk menjalankan aplikasi
-    "dev": "nodemon index.js" // Perintah untuk pengembangan dengan nodemon
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "engines": {
-    "node": "22.x" // Versi Node.js yang diperlukan
+    "node": "22.x"
   },
   "dependencies": {
-    "express": "^4.17.1", // Framework web untuk Node.js
-    "cors": "^2.8.5", // Middleware untuk mengizinkan CORS
-    "body-parser": "^1.19.0" // Middleware untuk parsing body request
+    "express": "^4.17.1",
+    "cors": "^2.8.5",
+    "body-parser": "^1.19.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7" // Alat untuk otomatisasi restart server saat pengembangan
+    "nodemon": "^2.0.7"
   },
   "keywords": [
     "api",
@@ -24,6 +24,6 @@
     "nodejs",
     "express"
   ],
-  "author": "Claire", // Ganti dengan nama Anda
-  "license": "ISC" // Ganti dengan lisensi yang sesuai
+  "author": "Claire",
+  "license": "ISC"
 }
