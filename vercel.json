@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "api/randomanime.js",
+      "src": "api/deepseeek.js",
       "use": "@vercel/node"
     },
     {
@@ -20,8 +20,8 @@
   ],
   "routes": [
     {
-      "src": "/api/randomanime",
-      "dest": "/api/randomanime.js"
+      "src": "/api/deepseek",
+      "dest": "/api/deepseek.js"
     },
     {
       "src": "/api/randomcosplay",
