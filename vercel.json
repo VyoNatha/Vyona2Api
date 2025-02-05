@@ -6,7 +6,7 @@
       "use": "@vercel/node"
     },
     {
-      "src": "api/randomcosplay.js",
+      "src": "api/font.js",
       "use": "@vercel/node"
     },
     {
@@ -20,12 +20,12 @@
   ],
   "routes": [
     {
-      "src": "/api/deepseek",
+      "src": "/api/deepseekRouter",
       "dest": "/api/deepseek.js"
     },
     {
-      "src": "/api/randomcosplay",
-      "dest": "/api/randomcosplay.js"
+      "src": "/api/font",
+      "dest": "/api/fontRouter.js"
     },
     {
       "src": "/api/nekopoi",
