@@ -69,7 +69,7 @@ async function fetchData(api, name, description) {
     // Set judul, deskripsi, dan link API
     popupTitle.innerText = name;
     popupDescription.innerText = description;
-    apiLinkInput.value = `https://claire-api.com/api/${api}`; // Link API otomatis
+    apiLinkInput.value = `https://claire-api.vercel.app/api/${api}`; // Link API otomatis
 
     try {
         const response = await fetch(`/api/${api}`);
