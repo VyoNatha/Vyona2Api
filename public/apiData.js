@@ -11,7 +11,7 @@ const apiList = [
     { 
         category: 'Anime',
         apis: [
-            { name: 'Anichin Detail', endpoint: 'anichindetail', description: 'Getting anime details in Anichin.' },
+            { name: 'Nekopoi', endpoint: 'nekopoi', description: 'Getting anime details in Anichin.' },
             { name: 'Anichin Search', endpoint: 'anichinsearch', description: 'Search anime in Anichin.' }
         ]
     },
