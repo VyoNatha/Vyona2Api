@@ -2,38 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "api/deepseek.js",
+      "src": "server.js",
       "use": "@vercel/node"
-    },
-    {
-      "src": "api/font.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "api/nekopoi.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "public/**/*",
-      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
-      "src": "/api/deepseek",
-      "dest": "/api/deepseek.js"
-    },
-    {
-      "src": "/api/font",
-      "dest": "/api/font.js"
-    },
-    {
-      "src": "/api/nekopoi",
-      "dest": "/api/nekopoi.js"
-    },
-    {
       "src": "/(.*)",
-      "dest": "/public/$1"
+      "dest": "server.js"
     }
   ]
 }
