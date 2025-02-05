@@ -2,18 +2,38 @@
   "version": 2,
   "builds": [
     {
-      "src": "server.js",
+      "src": "api/randomanime.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "api/randomcosplay.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "api/nekopoi.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "public/**/*",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "server.js"
+      "src": "/api/randomanime",
+      "dest": "/api/randomanime.js"
+    },
+    {
+      "src": "/api/randomcosplay",
+      "dest": "/api/randomcosplay.js"
+    },
+    {
+      "src": "/api/nekopoi",
+      "dest": "/api/nekopoi.js"
     },
     {
       "src": "/(.*)",
-      "dest": "public/$1"
+      "dest": "/public/$1"
     }
   ]
 }
