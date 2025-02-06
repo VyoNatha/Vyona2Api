@@ -2,7 +2,7 @@ const apiList = [
     { 
         category: 'Ai 2',
         apis: [
-            { name: 'Ai4Chat', endpoint: 'ai4chat', description: 'Ask with Ai4Chat' },
+            { name: 'Neko', endpoint: 'nekopoi', description: 'Ask with Ai4Chat' },
             { name: 'Lumin Ai', endpoint: 'luminai', description: 'Talk with luminai.' },
             { name: 'LilyChanAi', endpoint: 'lilychanai', description: 'Ask with Lilychan.' },
             { name: 'DeepSeek', endpoint: 'deepseek', description: 'Talk with model Deepseek.' }
