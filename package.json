@@ -2,7 +2,7 @@
   "name": "claire-api",
   "version": "1.0.0",
   "scripts": {
-    "start": "node index.js"
+    "start": "node api/allapi.js"
   },
   "dependencies": {
     "express": "^4.17.1",
