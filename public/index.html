@@ -3,58 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claire API</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        h1 {
-            color: #333;
-        }
-        #result {
-            margin-top: 20px;
-            padding: 10px;
-            background: #fff;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        button {
-            padding: 10px 15px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <title>API List</title>
 </head>
 <body>
-    <h1>Claire API - Nekopoi</h1>
-    <button id="fetchDataButton">Get Nekopoi Data</button>
-    <div id="result"></div>
-
-    <script>
-        document.getElementById('fetchDataButton').addEventListener('click', async () => {
-            const resultDiv = document.getElementById('result');
-            resultDiv.innerHTML = 'Loading...'; // Menampilkan loading
-
-            try {
-                const response = await fetch('/api/nekopoi');
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                const data = await response.json();
-                resultDiv.innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
-            } catch (error) {
-                resultDiv.innerHTML = `Error: ${error.message}`;
-            }
-        });
-    </script>
+    <h1>API List</h1>
+    <ul>
+        <li><a href="/nekopoi">Nekopoi API</a></li>
+    </ul>
 </body>
 </html>
