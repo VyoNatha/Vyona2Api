@@ -1,13 +1,13 @@
 const express = require('express');
-const allApiRouter = require('./api/allapi'); // Pastikan jalur ini benar
+const nekopoiRouter = require('./api/nekopoi'); // Mengimpor router dari nekopoi.js
 
 const app = express();
 
 // Middleware untuk parsing JSON
 app.use(express.json());
 
-// Gunakan router
-app.use('/api', allApiRouter); // Pastikan ini sesuai dengan rute yang Anda inginkan
+// Menggunakan router untuk endpoint /api/nekopoi
+app.use('/api/nekopoi', nekopoiRouter);
 
 // Endpoint dasar
 app.get('/', (req, res) => {
