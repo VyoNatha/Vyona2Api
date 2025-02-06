@@ -2,18 +2,22 @@
   "version": 2,
   "builds": [
     {
-      "src": "index.js",
+      "src": "api/allapi.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "public/**/*",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "index.js"
+      "dest": "/api/allapi.js"
     },
     {
       "src": "/(.*)",
-      "dest": "public/index.html"
+      "dest": "/public/$1"
     }
   ]
 }
