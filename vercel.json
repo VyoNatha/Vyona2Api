@@ -2,22 +2,18 @@
   "version": 2,
   "builds": [
     {
-      "src": "api/nekopoi.js",
+      "src": "index.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/api/nekopoi",
-      "dest": "/api/nekopoi.js"
+      "src": "/nekopoi",
+      "dest": "api/nekopoi.js"
     },
     {
       "src": "/",
-      "dest": "/public/index.html"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/public/$1"
+      "dest": "public/index.html"
     }
   ]
 }
