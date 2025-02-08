@@ -10,11 +10,7 @@
       "use": "@vercel/static"
     },
     {
-      "src": "public/styles.css",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "public/script.js",
+      "src": "public/main.js",
       "use": "@vercel/static"
     }
   ],
