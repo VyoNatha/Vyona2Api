@@ -10,6 +10,10 @@
       "use": "@vercel/static"
     },
     {
+      "src": "public/apiData.js",
+      "use": "@vercel/static"
+    },
+    {
       "src": "public/main.js",
       "use": "@vercel/static"
     }
