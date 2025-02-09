@@ -65,29 +65,46 @@ async function fetchData(api, name, description) {
     const popupTitle = document.getElementById('popupTitle');
     const popupDescription = document.getElementById('popupDescription');
     const apiLinkInput = document.getElementById('apiLink');
+    const popupLoadingScreen = document.getElementById('popupLoadingScreen');
 
     // Set judul, deskripsi, dan link API
     popupTitle.innerText = name;
     popupDescription.innerText = description;
     apiLinkInput.value = `https://claire-api.com/api/${api}`; // Link API otomatis
 
+    // Tampilkan overlay dan loading screen
+    overlay.classList.add('active');
+    document.body.classList.add('popup-active');
+    popupLoadingScreen.classList.add('active'); // Tampilkan loading screen
+    resultDiv.style.display = 'none'; // Sembunyikan result sementara
+
     try {
         const response = await fetch(`/api/${api}`);
         const data = await response.json();
         resultDiv.innerHTML = JSON.stringify(data, null, 2);
-        overlay.classList.add('active');
-        document.body.classList.add('popup-active'); // Nonaktifkan scroll
     } catch (error) {
         resultDiv.innerHTML = `Error: ${error.message}`;
-        overlay.classList.add('active');
-        document.body.classList.add('popup-active'); // Nonaktifkan scroll
+    } finally {
+        // Sembunyikan loading screen dan tampilkan result
+        popupLoadingScreen.classList.remove('active');
+        resultDiv.style.display = 'block';
     }
 }
 
 function closePopup() {
     const overlay = document.getElementById('overlay');
-    overlay.classList.remove('active');
-    document.body.classList.remove('popup-active'); // Aktifkan scroll kembali
+    const popupLoadingScreen = document.getElementById('popupLoadingScreen');
+    const resultPopup = document.querySelector('.result-popup');
+
+    // Reset state
+    popupLoadingScreen.classList.remove('active'); // Sembunyikan loading screen
+    resultPopup.style.opacity = '0';
+    resultPopup.style.transform = 'translateY(-20px)';
+
+    setTimeout(() => {
+        overlay.classList.remove('active');
+        document.body.classList.remove('popup-active');
+    }, 300); // Sesuaikan dengan durasi transisi
 }
 
 function copyResult() {
